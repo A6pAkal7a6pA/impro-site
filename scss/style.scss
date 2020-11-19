@@ -290,6 +290,22 @@ body {
     bottom: 0;
   }
 
+  .header__burger.active span {
+    transform: scale(0);
+  }
+
+  .header__burger.active::before {
+    transform: rotate(45deg);
+    top: 7px;
+    background-color: #fff;
+  }
+
+  .header__burger.active::after {
+    transform: rotate(-45deg);
+    bottom: 7px;
+    background-color: #fff;
+  }
+
   .menu {
     transform: translateX(-120%);
 
@@ -331,6 +347,10 @@ body {
     top: 8px;
     left: 50%;
     transform: translateX(-50%);
+  }
+  .header__logo img{
+    width: 100px;
+    height: 48px;
   }
 }
 @media (max-width: 500px) {
@@ -417,7 +437,7 @@ body {
   .mainscreen__link {
     font-size: 30px;
     padding: 20px 40px;
-}
+  }
 }
 
 .about {

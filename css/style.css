@@ -281,6 +281,22 @@ body {
   .header__burger::after {
     bottom: 0;
   }
+  .header__burger.active span {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .header__burger.active::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 7px;
+    background-color: #fff;
+  }
+  .header__burger.active::after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    bottom: 7px;
+    background-color: #fff;
+  }
   .menu {
     -webkit-transform: translateX(-120%);
             transform: translateX(-120%);
@@ -326,6 +342,10 @@ body {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
+  }
+  .header__logo img {
+    width: 100px;
+    height: 48px;
   }
 }
 
