@@ -1,0 +1,239 @@
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('../fonts/MyriadPro-Bold.eot');
+	src: local('../fonts/Myriad Pro Bold'), local('../fonts/MyriadPro-Bold'),
+		url('../fonts/MyriadPro-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/MyriadPro-Bold.woff') format('woff'),
+		url('../fonts/MyriadPro-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('../fonts/MyriadPro-Regular.eot');
+	src: local('../fonts/Myriad Pro Regular'), local('../fonts/MyriadPro-Regular'),
+		url('../fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/MyriadPro-Regular.woff') format('woff'),
+		url('../fonts/MyriadPro-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$fontfamily: "Myriad Pro";
+
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+nav,
+footer,
+header,
+aside,
+section {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  font-family: $fontfamily;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: $fontfamily;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+$maincolor: #1d2124;
+
+
+body{
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-size: 23px;
+
+}
+
+.wrapper{
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+
+  &__body {
+    background-color: $maincolor;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  &__logo {
+  }
+
+  &__logo img{
+    max-width: 200px;
+  }
+
+  &__contacts {
+  }
+}
+.menu {
+
+  &__list {
+    display: flex;
+    
+  }
+
+  &__list-item {
+    padding: 0 15px;
+
+    &_catalog {
+    }
+    &_catalog span{
+      padding-left: 5px;
+      display: block;
+      color: #fff;
+      display: inline-block;
+    }
+  }
+
+  &__list-link {
+    color: #fff;
+    text-transform: uppercase;
+
+    &_catalog {
+    }
+
+    &_button {
+    }
+  }
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  &__link{
+    color: #ccc;
+  }
+  &__phone {
+
+  }
+
+  &__adres {
+    font-size: 18px;
+  }
+}
+.fa-caret-down{
+
+}
+
+.mainscreen {
+  min-height: 100%;
+  width: 100%;
+  background: url(../images/mainscreen_bg.jpg) center center / cover no-repeat;
+
+  &__body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 60px;
+    color: #fff;
+    margin-bottom: 30px;
+    transform: translateY(-50%);
+
+  }
+
+  &__link {
+
+    background-color: $maincolor;
+    color: #fff;
+    padding: 30px 60px;
+    font-size: 40px;
+    border-radius: 15px;
+    
+  }
+}
+
+
