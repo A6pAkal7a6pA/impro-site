@@ -1,27 +1,24 @@
 @font-face {
-	font-family: 'Myriad Pro';
-	src: url('../fonts/MyriadPro-Bold.eot');
-	src: local('../fonts/Myriad Pro Bold'), local('../fonts/MyriadPro-Bold'),
-		url('../fonts/MyriadPro-Bold.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/MyriadPro-Bold.woff') format('woff'),
-		url('../fonts/MyriadPro-Bold.ttf') format('truetype');
-	font-weight: bold;
-	font-style: normal;
+  font-family: "Myriad Pro";
+  src: url("../fonts/MyriadPro-Bold.eot");
+  src: local("../fonts/Myriad Pro Bold"), local("../fonts/MyriadPro-Bold"),
+    url("../fonts/MyriadPro-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MyriadPro-Bold.woff") format("woff"), url("../fonts/MyriadPro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: 'Myriad Pro';
-	src: url('../fonts/MyriadPro-Regular.eot');
-	src: local('../fonts/Myriad Pro Regular'), local('../fonts/MyriadPro-Regular'),
-		url('../fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/MyriadPro-Regular.woff') format('woff'),
-		url('../fonts/MyriadPro-Regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Myriad Pro";
+  src: url("../fonts/MyriadPro-Regular.eot");
+  src: local("../fonts/Myriad Pro Regular"), local("../fonts/MyriadPro-Regular"),
+    url("../fonts/MyriadPro-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MyriadPro-Regular.woff") format("woff"), url("../fonts/MyriadPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 $fontfamily: "Myriad Pro";
-
 
 * {
   padding: 0;
@@ -103,20 +100,26 @@ h6 {
 
 $maincolor: #1d2124;
 
-
-body{
+body {
   font-weight: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
   font-size: 23px;
-
+  color: #fff;
 }
 
-.wrapper{
+.wrapper {
   min-height: 100%;
   width: 100%;
   position: relative;
+  background-color: $maincolor;
+}
+
+.container{
+  max-width: 1530px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .header {
@@ -132,13 +135,12 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
   }
 
   &__logo {
   }
 
-  &__logo img{
+  &__logo img {
     max-width: 200px;
   }
 
@@ -146,10 +148,8 @@ body{
   }
 }
 .menu {
-
   &__list {
     display: flex;
-    
   }
 
   &__list-item {
@@ -157,7 +157,7 @@ body{
 
     &_catalog {
     }
-    &_catalog span{
+    &_catalog span {
       padding-left: 5px;
       display: block;
       color: #fff;
@@ -181,19 +181,17 @@ body{
   flex-direction: column;
   align-items: flex-end;
 
-  &__link{
+  &__link {
     color: #ccc;
   }
   &__phone {
-
   }
 
   &__adres {
     font-size: 18px;
   }
 }
-.fa-caret-down{
-
+.fa-caret-down {
 }
 
 .mainscreen {
@@ -207,7 +205,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-
   }
 
   &__content {
@@ -222,18 +219,131 @@ body{
     color: #fff;
     margin-bottom: 30px;
     transform: translateY(-50%);
-
+    font-weight: bold;
   }
 
   &__link {
-
     background-color: $maincolor;
     color: #fff;
     padding: 30px 60px;
     font-size: 40px;
     border-radius: 15px;
-    
   }
 }
 
+.about {
+  color: #fff;
+  height: 100%;
+  width: 100%;
+
+  &__body {
+    height: 100%;
+    width: 100%;
+    padding: 50px 0px;
+    background-color: $maincolor;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+    row-gap: 30px;
+    column-gap: 100px;
+
+  }
+
+  &__item {
+    max-width: 100%;
+    // padding: 0 50px;
+    position: relative;
+
+
+  }
+
+  &__item-text-block{
+    display: grid;
+    align-content: center;
+    justify-items: center;
+  }
+
+  &__video-block{
+    position: relative;
+    padding-bottom: 40%;
+  }
+
+  &__item-video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    width: 100%;
+    z-index: 4;
+  }
+
+  &__item-text {
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  &__subtitle {
+    padding-top: 50px;
+    text-align: center;
+  }
+}
+
+.footer {
+
+  &__body {
+  }
+
+  &__contacts {
+    background-color: #ccc;
+    padding: 15px 0;
+    color: $maincolor;
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+  }
+
+  &__content-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &__content-link {
+    color: #fff;
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+
+  &__content-text {
+  }
+
+  &__content-map {
+  }
+
+  &__copy {
+    padding: 15px 0;
+    text-align: center;
+  }
+}
+.container {
+}
 
