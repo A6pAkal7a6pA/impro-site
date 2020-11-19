@@ -116,7 +116,7 @@ body {
   background-color: $maincolor;
 }
 
-.container{
+.container {
   max-width: 1530px;
   padding: 0 15px;
   margin: 0 auto;
@@ -248,24 +248,21 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
     row-gap: 30px;
     column-gap: 100px;
-
   }
 
   &__item {
     max-width: 100%;
     // padding: 0 50px;
     position: relative;
-
-
   }
 
-  &__item-text-block{
+  &__item-text-block {
     display: grid;
     align-content: center;
     justify-items: center;
   }
 
-  &__video-block{
+  &__video-block {
     position: relative;
     padding-bottom: 40%;
   }
@@ -286,7 +283,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    
   }
 
   &__subtitle {
@@ -296,7 +292,6 @@ body {
 }
 
 .footer {
-
   &__body {
   }
 
@@ -323,7 +318,7 @@ body {
   &__content-item {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
   }
 
@@ -346,4 +341,3 @@ body {
 }
 .container {
 }
-
